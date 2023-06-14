@@ -1,0 +1,31 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Deontology Game
+{% endblock %}
+
+{% block content %}
+
+<hr>
+    <div class="card" style="width: 100%;">
+    <div class="card-body">
+{#    Runde  {{ player.round_number }} von 5:<br>#}
+{#    <h5>Ihre Beiträge zu den Recyclingsystemen:</h5><br>#}
+{##}
+{#    <center><b>Öffentliches Recyclingsystem:</b><br>#}
+{#    Ihr Beitrag zum Öffentlichen Recyclingsystem beträgt {{ player.contribution_pg }} Einheit(en).<br><p></p>#}
+{#    <b>Recyclingsystem Ihres Klubs:</b><br>#}
+{#    Ihr Beitrag zum Recyclingsystem Ihres Klubs beträgt {{ player.contribution_cg1 }} Einheit(en).</center><br>#}
+{#        <hr>#}
+
+        <h5>Einordnung Ihres Beitrags in der ersten Runde: </h5><br>
+        {% formfield 's_society' %}
+        {% formfield 's_club' %}
+
+    <br>
+    <center>{% next_button %}</center>
+    </div></div>
+    <br>
+
+{% endblock %}

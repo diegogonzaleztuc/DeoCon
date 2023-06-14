@@ -1,0 +1,101 @@
+{{ block title }}
+    Aufgabe 1
+{{ endblock }}
+{{ block content }}
+
+<p align="justify">
+    Die Tabelle unten zeigt die 10 Situationen und die in jeder Situation zur Auswahl stehenden Optionen A und B.
+    Vergleichen Sie bitte zeilenweise die Optionen A und B und entscheiden Sie in <b>jeder Zeile</b> durch Klicken
+    des entsprechenden Buttons von A oder B. <br>
+    <br>
+</p>
+
+
+<table class='table table-bordered text-center'
+           style='width: auto; margin: auto'>
+        <tr>
+            <th width="25%">Option A</th>
+            <th colspan="2" width="25%">Auswahl</th>
+            <th width="50%">Option B</th>
+        </tr>
+        <tr>
+            <td>12,5 Punkte sicher</td>
+            <td><input type="radio" name="Holt1" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt1" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>25 Punkte sicher</td>
+            <td><input type="radio" name="Holt2" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt2" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>37,5 Punkte sicher</td>
+            <td><input type="radio" name="Holt3" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt3" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>50 Punkte sicher</td>
+            <td><input type="radio" name="Holt4" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt4" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>62,5 Punkte sicher</td>
+            <td><input type="radio" name="Holt5" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt5" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>75 Punkte sicher</td>
+            <td><input type="radio" name="Holt6" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt6" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>87,5 Punkte sicher</td>
+            <td><input type="radio" name="Holt7" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt7" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>100 Punkte sicher</td>
+            <td><input type="radio" name="Holt8" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt8" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>112,5 Punkte sicher</td>
+            <td><input type="radio" name="Holt9" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt9" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+        <tr>
+            <td>125 Punkte sicher</td>
+            <td><input type="radio" name="Holt10" value="A" class="btn btn-primary btn-large">A</input> </td>
+            <td><input type="radio" name="Holt10" value="B" class="btn btn-primary btn-large">B</input> </td>
+            <td>mit 50%: 125 Punkte, mit 50%: 0 Punkte</td>
+        </tr>
+    </table>
+
+<p align="justify">
+    <details>
+    <summary><b>Zum Lesen der Instruktionen bitte hier klicken</b></summary>
+    <p>{{ include Constants.instructions_template_sicher }}</p>
+    </details>
+    <br>
+    Wenn Sie in jeder Zeile eine Entscheidung getroffen haben, klicken Sie bitte auf weiter.
+    <br>
+</p>
+
+
+
+
+
+
+    {{ next_button }}
+
+
+{{ endblock }}

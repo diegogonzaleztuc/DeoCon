@@ -1,0 +1,34 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Deontology Game
+{% endblock %}
+
+{% block content %}
+
+    <p><hr><center>
+        <div class="card" style="width: 80%;">
+        <div class="card-body">
+
+        <h5>Ergebnis aus der letzten Runde: </h5><br>
+            {% if player.role == 'Käufer' %}
+            Rolle des Spielers: {{ player.role }} <br>
+            Eigene Ausstattung: {{ player.payoff_1 }} Einheit(en)<br>
+            Ausstattung des Gegenspielers: {{ player.payoff_2 }} Einheit(en) <br>
+            {% endif %}
+            {% if player.role == 'Unbeteiligter Beobachter' %}
+            Rolle des Spielers: {{ player.role }} <br>
+            Eigene Ausstattung: {{ player.payoff_2 }} Einheit(en)<br>
+            Ausstattung des Gegenspielers: {{ player.payoff_1 }} Einheit(en) <br>
+            {% endif %}
+        </div>
+        <br>
+    </center></p>
+    </div></div>
+
+    <p></p>
+    <center>{% next_button %}</center>
+<br>
+
+{% endblock %}

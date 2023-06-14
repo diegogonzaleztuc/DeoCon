@@ -1,0 +1,231 @@
+{{ block title }}Aussagen zu Fake-Bewertungen{{ endblock }}
+{{ block content }}
+
+ <p>
+        Im Folgenden möchten wir von Ihnen wissen, wie Sie bestimmte Aussagen zu Fake-Bewertungen einschätzen.  <br>
+        <br>
+        <i>Bitte kreuzen Sie für jede Aussage auf der Skala einen Wert an. Wenn Sie der Aussage voll und ganz zustimmen,
+            kreuzen Sie den Wert rechts auf der Skala an. Wenn Sie der Aussage überhaupt nicht zustimmen, kreuzen Sie den Wert links auf der Skala an. Wenn Sie teils zustimmen, teils nicht zustimmen, wählen Sie einen Wert dazwischen.</i>
+        <br>
+    </p>
+
+
+<table class="table">
+        <colgroup>
+            <col width="29%">
+            <col width="16%">
+            <col width="30%">
+            <col width="16%">
+        </colgroup>
+        <tr>
+            <td>
+                 <p align="justify">
+                     Fake-Bewertungen haben einen negativen Einfluss auf das Kaufverhalten.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale1 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="justify">
+                 <p>
+                     Verkäufer, die neu in den Markt eintreten, nutzen besonders viele Fake-Bewertungen.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale2 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="justify">
+                 <p>
+                     Das Problem von Fake-Bewertungen nimmt zu.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale3 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="justify">
+                 <p>
+                     Durch Fake-Bewertungen nimmt das Vertrauen in ein Bewertungssystem ab.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale4 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="justify">
+                 <p>
+                     Wenn ein Verkäufer eine negative Bewertung erhalten hat, ist der Kauf einer positiven Bewertung gerechtfertigt.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale5 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+        <tr>
+            <td align="justify">
+                 <p>
+                     Das eigentliche Problem sind die Unternehmen, die Fake-Bewertungen anbieten und erstellen.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale6 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+    <tr>
+            <td align="justify">
+                 <p>
+                     Wenn auf Märkten eine hohe Transparenz herrscht und Verkäuferprofile öffentlich sichtbar sind, werden
+                     mehr Fake-Bewertungen genutzt.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale7 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+    <tr>
+            <td align="justify">
+                 <p>
+                     Mehr Information darüber, was bewertet wird, reduziert die Problematik von Fake-Bewertungen.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale8 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+    <tr>
+            <td align="justify">
+                 <p>
+                     Die verstärkte Nutzung von Fake-Bewertungen auf einer Online-Plattform könnte langfristig dazu führen,
+                     dass die Kunden diese Plattform meiden und Produkte dort nicht mehr verkauft werden können.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale9 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+    <tr>
+            <td align="justify">
+                 <p>
+                     Wenn ein Konkurrent sich positive Bewertungen kauft, sehe ich es akzeptabel sich ebenfalls
+                     positive Bewertungen zu kaufen.
+                 </p>
+            </td>
+            <td align="right">
+                 <p>
+                     Ich stimme voll und ganz zu
+                 </p>
+            </td>
+            <td align="center">
+                 {{ formfield player.scale10 label="" }}
+            </td>
+            <td align="left">
+                 <p>
+                     Ich stimme überhaupt nicht zu
+                 </p>
+            </td>
+        </tr>
+    </table>
+
+
+
+
+    {{ next_button }}
+
+
+{{ endblock }}

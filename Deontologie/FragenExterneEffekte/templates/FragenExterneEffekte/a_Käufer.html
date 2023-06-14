@@ -1,0 +1,69 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Rolle des Käufers
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+<div class="card-body">
+Sie sind ein Käufer, der entschieden hat, einige Produkte im Supermarkt zu kaufen.
+Während des Einkaufs interessieren Sie sich für ein bestimmtes Produkt, das aufgrund seiner Eigenschaften und Merkmale für Sie von Interesse ist.
+Es ist jedoch wichtig zu beachten, dass dieses Produkt eine bestimmte Wahrscheinlichkeit π (in Prozent) hat, durch den Kauf einen Schaden für eine andere Person oder die Gemeinschaft zu verursachen.
+Daraus möchten wir Ihnen die folgende Frage stellen:
+<br>
+<hr>
+<center>
+    {% formfield 'Frage_1' %} <hr>
+</center>
+
+Konsequenzen:
+<p>Wenn die Wahrscheinlichkeit <span id=".input-group-text"></span> Prozent eines Schadens von 40 Euro bei einem Produkt in Entwicklungsländern und einem Wert von 100 Euro sowie Herstellungskosten von 80 Euro liegt, könnte Folgendes passieren:</p>
+<ul>
+<li>Vorteile des Käufers: <span id="result"></span> Euro.</li>
+<li>Grenzschaden an Dritten: <span id="result1"></span> Euro.</li>
+    <script>
+    var slider = document.getElementById("id_Frage_1");
+    var sliderValueElement = document.getElementById(".input-group-text");
+    var resultElement = document.getElementById("result");
+    var result1Element = document.getElementById("result1");
+
+    function updateResult() {
+        var sliderValue = slider.value;
+        sliderValueElement.innerText = sliderValue;
+        var p = sliderValue;
+        var c = 1.5 - 1.5 * Math.exp(-3 * (p / 100));
+        var result = 100 - (80 - (c * 40));
+        var result1 = (p / 100) * 40;
+        resultElement.innerText = result.toFixed(2);
+        result1Element.innerText = result1.toFixed(2);
+        }
+
+    slider.value = 50;
+
+    updateResult();
+    slider.addEventListener("input", updateResult);
+    data.addEventListener("update", updateResult);
+    </script>
+</center>
+</div></div>
+
+<center>
+    {% next_button %}
+</center>
+
+</div></div>
+
+<script>
+setTimeout(
+function () {
+            alert("Bitte senden Sie den Fragebogen im Laufe der nächsten zwei Minuten ab.");
+            },
+            180*1000 // 60 seconds
+            );
+</script>
+
+{% endblock %}
+

@@ -1,0 +1,17 @@
+{{ block title }} Teil 2 - Aufgabe 1 {{ endblock }}
+
+{{ block content }}
+{{ if player.id_in_group == 1 }}
+
+        <p>{{ include Constants.instructions_template_Lotterie }}</p>
+
+{{ else }}
+
+        <p>{{ include Constants.instructions_template_sicher }}</p>
+
+{{ endif }}
+    {{ next_button }}
+
+{{ endblock }}
+
+

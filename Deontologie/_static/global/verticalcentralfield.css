@@ -1,0 +1,14 @@
+.survey {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.question {
+  margin-bottom: 20px;
+  text-align: center;
+  text-align-last: left; /* Desactivar la justificación de la última línea */
+  text-justify: auto; /* Desactivar la justificación del texto */
+  font-size: inherit; /* Mantener el tamaño de letra original */

@@ -1,0 +1,67 @@
+{% extends "global/Page.html" %}
+{% load otree %}
+
+{% block title %}
+    Deontology Game
+{% endblock %}
+
+{% block content %}
+
+
+<div class="card" style="width: 100%;">
+<div class="card-body">
+Runde  {{ player.round_number }} von 1:<br>
+<h5>Kauf des Fairtrade-Produkts</h5>
+
+
+</p><hr>
+<center>{{ formfield 'Frage_1' }} <hr></center>
+
+
+<h5>Mögliche Konsequenzen der aktuellen Runde: </h5><br>
+Ausgewähltes Produkt: <span id=".input-group-text"></span> Prozent.<br>
+Vorteile des Käufers: <span id="result"></span> Euro.<br>
+Grenzschaden an Dritten: <span id="result1"></span> Euro.<br>
+
+<script>
+    var slider = document.getElementById("id_Frage_1");
+    var sliderValueElement = document.getElementById(".input-group-text");
+    var resultElement = document.getElementById("result");
+    var result1Element = document.getElementById("result1");
+
+    function updateResult() {
+    var sliderValue = slider.value;
+    sliderValueElement.innerText = sliderValue;
+    var p = sliderValue;
+    var c = 1.5 - 1.5 * Math.exp(-3 * (p / 100));
+    var result = 100 - (80 - (c * 40));
+    var result1 = (p / 100) * 40;
+    resultElement.innerText = result.toFixed(2); // Rundet das Ergebnis auf 2 Nachkommastellen
+    result1Element.innerText = result1.toFixed(2); // Rundet das Ergebnis auf 2 Nachkommastellen
+    }
+
+    slider.value = 50;
+    updateResult();
+
+    slider.addEventListener("input", updateResult);
+
+    data.addEventListener("update", updateResult);
+</script>
+
+<div><b><div id="outcomes"></div></b></div>
+
+<p></p>
+<center>{% next_button %}</center>
+</div></div>
+<br>
+
+<script>
+setTimeout(
+function () {
+    alert("Bitte treffen Sie Ihre Entscheidung innerhalb der nächsten 30 Sekunden!");
+},
+150*1000 // 60 seconds
+);
+</script>
+
+{% endblock %}

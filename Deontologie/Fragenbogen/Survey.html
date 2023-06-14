@@ -1,0 +1,164 @@
+{{ block title }}Fragenbogen{{ endblock }}
+{{ block content }}
+
+<p>Im Folgenden möchten wir von Ihnen wissen, wie Sie bestimmten Aussagen zustimmen.
+<br><br>
+<i>Bitte kreuzen Sie für jede Aussage auf der Skala einen Wert an. Wenn Sie der Aussage voll und ganz zustimmen,
+kreuzen Sie den Wert rechts auf der Skala oder den Wert 1 an. Wenn Sie der Aussage überhaupt nicht zustimmen,
+kreuzen Sie den Wert links auf der Skala oder den Wert 7 an.
+Wenn Sie teils zustimmen, teils nicht zustimmen, wählen Sie einen Wert dazwischen.</i>
+<br>
+</p>
+
+
+<table class="table">
+    <colgroup>
+        <col width="34%">
+        <col width="11%">
+        <col width="44%">
+        <col width="11%">
+    </colgroup>
+    <tr>
+    <td align="justify">
+         Wenn die einzige Möglichkeit, im Notfall das Leben einer anderen Person zu retten, darin besteht,
+         ein eigenes Bein zu opfern, dann ist man moralisch dazu verpflichtet, dieses Opfer zu bringen.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale1 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Aus moralischer Sicht sollten wir uns verpflichtet fühlen, einer Person mit Nierenversagen eine
+     unserer Nieren zu spenden, da wir nicht zwei Nieren zum Überleben brauchen, sondern eigentlich nur
+     eine, um gesund zu sein.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale2 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Aus moralischer Sicht sollten sich die Menschen gleichermaßen um das Wohlergehen aller Menschen
+     auf dem Planeten kümmern; Sie sollten nicht das Wohlergehen von Menschen begünstigen, die ihnen
+     körperlich oder emotional besonders nahestehen.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale3 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+        Es ist genauso falsch, jemandem nicht zu helfen, wie ihm selbst aktiv zu schaden.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale4 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Es ist moralisch falsch, Geld aufzubewahren, das man nicht wirklich braucht, wenn man es für Zwecke
+     spenden kann, die denjenigen wirksam helfen, die davon sehr profitieren.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale5 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Es ist moralisch richtig, einer unschuldigen Person Schaden zuzufügen, wenn die Schädigung dieser
+     Person ein notwendiges Mittel ist, um mehreren anderen unschuldigen Menschen zu helfen.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale6 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Wenn die einzige Möglichkeit, das allgemeine Wohlergehen und Glück der Menschen sicherzustellen,
+     darin besteht, für einen kurzen, begrenzten Zeitraum politische Unterdrückung anzuwenden, dann
+     sollte politische Unterdrückung eingesetzt werden.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale7 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Es ist zulässig, eine unschuldige Person zu foltern, wenn dies notwendig wäre, um Informationen
+     zu liefern, mit denen ein Attentat verhindert werden kann, dem Hunderte von Menschen zum Opfer
+     fallen würden.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale8 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    <tr>
+    <td align="justify">
+     Manchmal ist es moralisch notwendig, dass unschuldige Menschen als Kollateralschaden sterben –
+     wenn insgesamt mehr Menschen gerettet werden.
+    </td>
+    <td align="right">
+        Ich stimme voll und ganz zu
+    </td>
+    <td align="center">
+         {{ formfield player.scale9 label="" }}
+    </td>
+    <td align="left">
+         Ich stimme überhaupt nicht zu
+    </td>
+    </tr>
+    </table>
+
+
+<center>{{ next_button }}</center>
+
+{{ endblock }}

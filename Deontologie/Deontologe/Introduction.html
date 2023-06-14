@@ -1,0 +1,167 @@
+{{ block content }}
+
+<script>
+    .tab_header {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    text-align: center;
+}
+
+.tab_element {
+    display: block;
+    /* width: 300px; */
+}
+
+.next {
+    float: right;
+    margin: 40px auto;
+}
+
+.back {
+    float: left;
+    margin: 40px auto;
+}
+
+.card-header {
+    padding: 0;
+}
+</script>
+
+
+
+
+
+<ul class="nav nav-tabs fixed-top navbar-light bg-light justify-content-center" id="myTab" role="tablist">
+        <li class="nav-item tab_header">
+            <a class="nav-link active tab_element" id="part1-tab" data-toggle="tab" href="#part1" role="tab"
+               aria-controls="part1"
+               onclick="topFunction()">Allgemein</a>
+        </li>
+
+        <li class="nav-item tab_header">
+            <a class="nav-link tab_element" id="part2-tab" data-toggle="tab" href="#part2" role="tab"
+               aria-controls="part2"
+               onclick="topFunction()">Aufgabe</a>
+        </li>
+
+
+        <li class="nav-item tab_header">
+            <a class="nav-link tab_element" id="part4-tab" data-toggle="tab" href="#part4" role="tab"
+               aria-controls="part4"
+               onclick="topFunction()">Auszahlung</a>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+
+        <!-- Tab 1 content -->
+        <div class="customInstructions tab-pane show active" id="part1" role="tabpanel" aria-labelledby="part1-tab">
+            <div class="card-header bg-transparent mainheader">
+                <h3>Allgemeine Informationen</h3>
+            </div>
+
+            <div class="card mt-5 mb-3">
+
+            <h5 class="card-header bg-gray text-black">Ihre Aufgabe im ersten Teil der Studie</h5>
+
+                    <div class="card-body">
+            <p align="justify">
+
+
+
+                Ihre Auszahlung in Teil 1
+                wird also in Talern berechnet und am Ende der Studie mittels des folgenden Wechselkurses in Euro umgerechnet:
+                <br>
+                        <p align="center"> <b> 100 Taler = 1,50 Euro</b></p>
+
+                        </p>
+                Auf den folgenden Seiten erläutern wir Ihnen Ihre Aufgabe im ersten Teil der Studie detaillierter.
+                        </div>
+            </div>
+            <p>
+            <b>Wichtiger Hinweis:</b> <br>
+            Auf den Seiten, die den Instruktionen zu Teil 1 folgen, besteht die Möglichkeit, die Instruktionen zu Teil 1
+            jederzeit nachzulesen (am unteren Rand).
+             </p>
+
+
+
+            <button onclick="topFunction()" type="button" class="nexttab btn-primary btn next">Weiter</button>
+        </div>
+
+
+        <!-- Tab 2 content -->
+        <div class="tab-pane" id="part2" role="tabpane2" aria-labelledby="part2-tab">
+            <div class="card-header bg-transparent mainheader">
+                <h3>Ihre Aufgabe in Teil 1</h3>
+            </div>
+
+            <p>
+                Text Text
+            </p>
+
+            <button onclick="topFunction()" type="button" class="prevtab btn-primary btn back">Zurück</button>
+            <button type="button" class="nexttab btn-primary btn next">Weiter</button>
+        </div>
+
+
+        <!-- Tab content 4 -->
+        <div class="tab-pane" id="part4" role="tabpane4" aria-labelledby="part4-tab">
+            <div class="card-header bg-transparent mainheader">
+                <h3>Berechnung Ihrer Auszahlung</h3>
+            </div>
+
+        <p align="justify">
+            <br>
+            Text Text Text
+        </p>
+
+            <div class="card bg-light">
+            <h5 class="card-header bg-gray text-black">Die Auszahlung einer Runde setzt sich wie folgt zusammen</h5>
+    <div class="card card-body bg-light instructions">
+
+        <p align="justify" class="card-text">
+
+        Auszahlung wird am Ende der Studie dann mittels des folgenden Wechselkurses in Euro umgerechnet:
+              <br>
+                        <p align="center"> <b> 100 Taler = 1,50 Euro</b></p>
+                <br>
+              <b>Alle Teilnehmer werden über das Ergebnis von Teil 1 erst am Ende der gesamten Studie informiert.</b>
+              <hr>
+            <b>Wichtiger Hinweis:</b><br>
+            Auf den Seiten, die den Instruktionen zu Teil 1 folgen, besteht die Möglichkeit, die Instruktionen zu Teil 1
+            jederzeit nachzulesen (am unteren Rand).
+
+          </p>
+    </div>
+            </div>
+
+            <button onclick="topFunction()" type="button" class="prevtab btn-primary btn back">Zurück</button>
+            <button onclick="submit()" class="nexttab btn-primary btn next">Weiter</button>
+        </div>
+
+{{ endblock }}
+
+
+{% block scripts %}
+
+    <script src="{% static 'instruction_tabs/carousel.js' %}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            if (location.hash) {
+                $("a[href='" + location.hash + "']").tab("show");
+            }
+            $(document.body).on("click", "a[data-toggle='tab']", function(event) {
+                location.hash = this.getAttribute("href");
+            });
+        });
+        $(window).on("popstate", function() {
+            var anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+            $("a[href='" + anchor + "']").tab("show");
+        });
+    </script>
+
+
+{{ endblock }}

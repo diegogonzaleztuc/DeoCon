@@ -1,0 +1,22 @@
+{{ block title }}
+    Soziodemographie
+{{ endblock }}
+
+{{ block content }}
+<p>
+    Wir bitten Sie hier um ein paar allgemeine Angaben zu Ihrer Person.
+</p>
+
+{{ formfield player.age label="Geburtsjahr (JJJJ)"}}
+{{ formfield player.gender label="Geschlecht"}}
+{{ formfield player.studies label="Studienrichtung / Fakultät"}}
+{{ formfield player.semester label="Semester (insgesamt an einer Hochschule)"}}
+
+{{ formfield player.work label="Haben Sie aktuell eine dauerhafte Beschäftigung mit mehr als 10 Stunden pro Woche?"}}
+
+{{ formfield player.bafog label="Beziehen Sie aktuell Bafög?"}}
+
+    {{ next_button }}
+{{ endblock }}
+
+

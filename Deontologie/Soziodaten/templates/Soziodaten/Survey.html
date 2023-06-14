@@ -1,0 +1,38 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+Sozioökonomische Daten
+{% endblock %}
+
+{% block content %}
+
+<div class="card">
+<div class="card-body">
+Sie haben das Experiment abgeschlossen. Wir würden uns sehr freuen, wenn Sie uns nun durch das Ausfüllen des folgenden Fragebogens Ihre Meinung zu dem Experiment mitteilen würden.
+Ihre Antworten sind uns sehr wichtig und werden uns helfen, das Experiment und seine Ergebnisse zu verbessern. Vielen Dank im Voraus für Ihre Teilnahme!
+<br>
+
+<hr>
+<center>
+    {% formfield 'age' %} <hr>
+    {% formfield 'gender' %} <hr>
+    {% formfield 'education' %} <hr>
+    {% formfield 'income' %} <hr>
+    {% formfield 'nationality' %} <hr>
+    {% formfield 'religion' %} <hr>
+    {% formfield 'party_preferences' %} <hr>
+
+    {% next_button %}</center>
+</div></div>
+
+<script>
+setTimeout(
+function () {
+            alert("Bitte senden Sie den Fragebogen im Laufe der nächsten zwei Minuten ab.");
+            },
+            180*1000 // 60 seconds
+            );
+</script>
+
+{% endblock %}
